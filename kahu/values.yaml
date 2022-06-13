@@ -1,0 +1,16 @@
+controllers:
+  backupController:
+    image: docker.io/library/kahu:v1
+    imagePullPolicy: IfNotPresent
+    metaServiceAddr: kahu-nfs-provider.default.svc.cluster.local
+
+metaService:
+  image: docker.io/library/kahu:v1
+  mountPath: "/data"
+
+providers:
+  nfsProvider:
+    image: docker.io/library/kahu:v1
+    nfsProviderPort: 8181
+    metaServiceAddr: "0.0.0.0"
+
