@@ -103,7 +103,7 @@ spec:
   accessModes:
     - ReadWriteMany
   nfs:
-    server: 192.168.20.124
-    path: "/mnt/nfs_share"
+    server: {{ .Values.providers.nfsProvider.nfsServer }}
+    path: "{{ .Values.providers.nfsProvider.path }}"
     #  mountOptions:
     #- nfsvers=4.2

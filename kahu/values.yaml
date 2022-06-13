@@ -13,4 +13,6 @@ providers:
     image: docker.io/library/kahu:v1
     nfsProviderPort: 8181
     metaServiceAddr: "0.0.0.0"
+    nfsServer: 192.168.20.124
+    path: "/mnt/nfs_share"
 
